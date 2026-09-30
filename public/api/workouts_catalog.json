@@ -1,0 +1,172 @@
+{
+  "items" : [
+    {
+      "coachAvatarName" : "coach_hannah_avatar",
+      "coachBio" : {
+        "en" : "Specializes in core sculpt and athletic conditioning. Former Olympic weightlifting coach with 8+ years coaching experience.",
+        "es" : "Especializada en escultura de core y acondicionamiento. Ex entrenadora de halterofilia con más de 8 años de experiencia.",
+        "zh-Hans" : "专注于核心塑形与运动体能表现。前举重国家一级教练，具备 8+ 年高阶体能执教经验。",
+        "zh-Hant" : "專注於核心塑形與運動體能表現。前舉重國家一級教練，具備 8+ 年高階體能執教經驗。"
+      },
+      "coachName" : "Coach Hannah",
+      "coachTitle" : {
+        "en" : "Certified Functional Trainer",
+        "es" : "Entrenadora Funcional Certificada",
+        "zh-Hans" : "ACE 国际认证体适能教练",
+        "zh-Hant" : "ACE 國際認證體適能教練"
+      },
+      "downloadSizeMB" : 14.9,
+      "isBundled" : true,
+      "localizedNames" : {
+        "en" : "10-Min Core Abs",
+        "es" : "10-Min Abdominales",
+        "zh-Hans" : "10分钟 核心腹肌",
+        "zh-Hant" : "10分鐘 核心腹肌"
+      },
+      "localizedSubtitles" : {
+        "en" : "12 High-Def Exercises • 30s Work \/ 20s Rest",
+        "es" : "12 Ejercicios HD • 30s Trabajo \/ 20s Descanso",
+        "zh-Hans" : "12 组高画质动作 • 30秒训练 \/ 20秒休息",
+        "zh-Hant" : "12 組高畫質動作 • 30秒訓練 \/ 20秒休息"
+      },
+      "preset" : {
+        "cooldownDuration" : 10,
+        "cycles" : 1,
+        "exercises" : [
+          {
+            "englishName" : "Standard Crunch",
+            "focusArea" : "上腹肌群",
+            "formCue" : "下巴微收・上背捲離地面",
+            "iconName" : "figure.core.training",
+            "id" : "abs_01",
+            "name" : "仰臥捲腹",
+            "round" : 1,
+            "videoFileName" : "abs_01_crunch"
+          },
+          {
+            "englishName" : "Cross Crunch R",
+            "focusArea" : "右側腹內外斜肌",
+            "formCue" : "右肘碰左膝・轉體呼氣",
+            "iconName" : "figure.core.training",
+            "id" : "abs_02",
+            "name" : "右側交叉捲腹",
+            "round" : 2,
+            "videoFileName" : "abs_02_crosscrunch_r"
+          },
+          {
+            "englishName" : "Cross Crunch L",
+            "focusArea" : "左側腹內外斜肌",
+            "formCue" : "左肘碰右膝・轉體呼氣",
+            "iconName" : "figure.core.training",
+            "id" : "abs_03",
+            "name" : "左側交叉捲腹",
+            "round" : 3,
+            "videoFileName" : "abs_03_crosscrunch_l"
+          },
+          {
+            "englishName" : "Bicycle Crunch",
+            "focusArea" : "腹外斜肌與核心",
+            "formCue" : "對側手肘觸膝・雙腿伸直踩踏",
+            "iconName" : "figure.core.training",
+            "id" : "abs_04",
+            "name" : "單車捲腹",
+            "round" : 4,
+            "videoFileName" : "abs_04_bicyclecrunch"
+          },
+          {
+            "englishName" : "Single Leg Extension",
+            "focusArea" : "下腹肌群",
+            "formCue" : "下背貼地・單腿交替伸直",
+            "iconName" : "figure.core.training",
+            "id" : "abs_05",
+            "name" : "單腿伸展",
+            "round" : 5,
+            "videoFileName" : "abs_05_singlelegextension"
+          },
+          {
+            "englishName" : "Reverse Crunch",
+            "focusArea" : "下腹與骨盆",
+            "formCue" : "骨盆捲離地面・核心收縮",
+            "iconName" : "figure.core.training",
+            "id" : "abs_06",
+            "name" : "反向捲腹",
+            "round" : 6,
+            "videoFileName" : "abs_06_reversecrunch"
+          },
+          {
+            "englishName" : "Ab Tuck Extensions",
+            "focusArea" : "全腹肌群",
+            "formCue" : "收腿抱膝・伸直時下背不離地",
+            "iconName" : "figure.core.training",
+            "id" : "abs_07",
+            "name" : "屈伸收腹",
+            "round" : 7,
+            "videoFileName" : "abs_07_abtuckextensions"
+          },
+          {
+            "englishName" : "Flutter Kicks",
+            "focusArea" : "下腹核心極限",
+            "formCue" : "雙腿微懸空・快速上下交錯",
+            "iconName" : "figure.core.training",
+            "id" : "abs_08",
+            "name" : "剪刀腳打水",
+            "round" : 8,
+            "videoFileName" : "abs_08_flutterkicks"
+          },
+          {
+            "englishName" : "Side Plank Reach R",
+            "focusArea" : "右側腹核心",
+            "formCue" : "右側支撐・左手穿過軀幹下方",
+            "iconName" : "figure.core.training",
+            "id" : "abs_09",
+            "name" : "側平板穿針 - 右",
+            "round" : 9,
+            "videoFileName" : "abs_09_sideplankreachr"
+          },
+          {
+            "englishName" : "Side Plank Reach L",
+            "focusArea" : "左側腹核心",
+            "formCue" : "左側支撐・右手穿過軀幹下方",
+            "iconName" : "figure.core.training",
+            "id" : "abs_10",
+            "name" : "側平板穿針 - 左",
+            "round" : 10,
+            "videoFileName" : "abs_10_sideplankreachl"
+          },
+          {
+            "englishName" : "Scissor Crossovers",
+            "focusArea" : "下腹與內側",
+            "formCue" : "雙腿水平交叉・保持核心緊繃",
+            "iconName" : "figure.core.training",
+            "id" : "abs_11",
+            "name" : "交叉剪刀腳",
+            "round" : 11,
+            "videoFileName" : "abs_11_scissorcrossovers"
+          },
+          {
+            "englishName" : "Sprinter Sit Ups",
+            "focusArea" : "爆發力核心",
+            "formCue" : "如衝刺般坐起・對側手腳相碰",
+            "iconName" : "figure.core.training",
+            "id" : "abs_12",
+            "name" : "衝刺起坐",
+            "round" : 12,
+            "videoFileName" : "abs_12_sprintersitups"
+          }
+        ],
+        "iapProductId" : "com.chiangkevin.workouttimer.abs10min",
+        "id" : "44444444-4444-4444-4444-444444444444",
+        "isCurated" : true,
+        "isCustom" : false,
+        "name" : "10-Min Abs 核心腹肌",
+        "prepareDuration" : 20,
+        "restBetweenCycles" : 0,
+        "restDuration" : 20,
+        "sets" : 12,
+        "type" : "hiit",
+        "workDuration" : 30
+      }
+    }
+  ],
+  "version" : 1
+}

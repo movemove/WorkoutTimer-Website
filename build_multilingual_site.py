@@ -2117,12 +2117,20 @@ Allow: /
 Sitemap: https://workout.appengine.fun/sitemap.xml
 """
 
+catalog_path = os.path.join(base_dir, "public", "api", "workouts_catalog.json")
+if os.path.exists(catalog_path):
+    with open(catalog_path, "r", encoding="utf-8") as f:
+        workouts_catalog_raw = f.read()
+else:
+    workouts_catalog_raw = '{"version": 1, "items": []}'
+
 worker_js = f"""
 const PAGES = {json.dumps(pages)};
 const PRIVACY_PAGES = {json.dumps(privacy_pages)};
 const IMAGES = {json.dumps(images_dict)};
 const SITEMAP_XML = {json.dumps(sitemap_xml)};
 const ROBOTS_TXT = {json.dumps(robots_txt)};
+const WORKOUTS_CATALOG_RAW = {json.dumps(workouts_catalog_raw)};
 
 function base64ToUint8Array(base64) {{
   const binaryString = atob(base64);
@@ -2196,6 +2204,17 @@ export default {{
         }});
       }}
       return new Response("Image Not Found", {{ status: 404 }});
+    }}
+
+    // 3.5. Workouts Catalog API (Dynamic In-App Purchases & Programs)
+    if (pathname === "/api/workouts_catalog.json" || pathname === "/workouts_catalog.json") {{
+      return new Response(WORKOUTS_CATALOG_RAW, {{
+        headers: {{
+          "content-type": "application/json;charset=UTF-8",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=60, stale-while-revalidate=300"
+        }}
+      }});
     }}
 
     // 4. Privacy Policy
