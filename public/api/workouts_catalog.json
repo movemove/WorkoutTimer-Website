@@ -163,7 +163,7 @@
         "restBetweenCycles" : 0,
         "restDuration" : 20,
         "sets" : 12,
-        "type" : "hiit",
+        "type" : "HIIT",
         "workDuration" : 30
       }
     }
