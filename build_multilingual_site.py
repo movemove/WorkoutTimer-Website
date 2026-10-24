@@ -2208,6 +2208,18 @@ export default {{
 
     // 3.5. Workouts Catalog API (Dynamic In-App Purchases & Programs)
     if (pathname === "/api/workouts_catalog.json" || pathname === "/workouts_catalog.json") {{
+      if (env && env.ASSETS_BUCKET) {{
+        const obj = await env.ASSETS_BUCKET.get("api/workouts_catalog.json");
+        if (obj) {{
+          return new Response(obj.body, {{
+            headers: {{
+              "content-type": "application/json;charset=UTF-8",
+              "access-control-allow-origin": "*",
+              "cache-control": "public, max-age=60, stale-while-revalidate=300"
+            }}
+          }});
+        }}
+      }}
       return new Response(WORKOUTS_CATALOG_RAW, {{
         headers: {{
           "content-type": "application/json;charset=UTF-8",
@@ -2215,6 +2227,25 @@ export default {{
           "cache-control": "public, max-age=60, stale-while-revalidate=300"
         }}
       }});
+    }}
+
+    // 3.6. Cloudflare R2 Workout Video & Audio Assets (/assets/:slug/...)
+    if (pathname.startsWith("/assets/") && env && env.ASSETS_BUCKET) {{
+      const key = decodeURIComponent(pathname.slice(1));
+      const obj = await env.ASSETS_BUCKET.get(key);
+      if (!obj) {{
+        return new Response("Asset Not Found", {{ status: 404 }});
+      }}
+      const headers = new Headers();
+      obj.writeHttpMetadata(headers);
+      headers.set("etag", obj.httpEtag);
+      headers.set("access-control-allow-origin", "*");
+      headers.set("accept-ranges", "bytes");
+      headers.set("cache-control", "public, max-age=31536000, immutable");
+      if (key.endsWith(".mp4")) headers.set("content-type", "video/mp4");
+      else if (key.endsWith(".mp3")) headers.set("content-type", "audio/mpeg");
+      else if (key.endsWith(".json")) headers.set("content-type", "application/json;charset=UTF-8");
+      return new Response(obj.body, {{ status: 200, headers }});
     }}
 
     // 4. Privacy Policy
@@ -2264,7 +2295,14 @@ body.append(b'Content-Type: application/json')
 body.append(b'')
 body.append(json.dumps({
     "main_module": "index.js",
-    "compatibility_date": "2024-03-03"
+    "compatibility_date": "2024-03-03",
+    "bindings": [
+        {
+            "type": "r2_bucket",
+            "name": "ASSETS_BUCKET",
+            "bucket_name": "workouttimer-assets"
+        }
+    ]
 }).encode())
 
 body.append(f"--{boundary}".encode())
@@ -2292,7 +2330,7 @@ except Exception as e:
     curl_cmd = [
         "curl", "-s", "-X", "PUT", url,
         "-H", f"Authorization: Bearer {token}",
-        "-F", 'metadata={"main_module": "index.js", "compatibility_date": "2024-03-03"};type=application/json',
+        "-F", 'metadata={"main_module": "index.js", "compatibility_date": "2024-03-03", "bindings": [{"type": "r2_bucket", "name": "ASSETS_BUCKET", "bucket_name": "workouttimer-assets"}]};type=application/json',
         "-F", f'index.js=@{out_worker};filename="index.js";type=application/javascript+module'
     ]
     res = subprocess.run(curl_cmd, capture_output=True, text=True)
