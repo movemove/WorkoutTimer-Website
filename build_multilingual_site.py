@@ -111,9 +111,19 @@ translations = {
         ],
 
         # Video Demo Section
-        "sec_video_badge": "APP DEMO",
-        "sec_video_title": "Experience Workout Timer in Action",
-        "sec_video_sub": "Watch Coach Hannah guide the 10-Min Abs routine, explore 50:50 Cinema Mode, and see Apple Watch & AirPods live sync in real-time.",
+        "sec_video_badge": "COACH & APP SHOWCASE",
+        "sec_video_title": "Meet Your AI & Studio Coaches in Action",
+        "sec_video_sub": "Watch Coach Hannah Lin's 10-Min Core Abs + Box Breathing routine, Dr. Elena Lindqvist's 12-Min Clinical Core & Ab Sculpting (No Neck Pain), and the full 50:50 Cinema & Apple Watch live sync walkthrough.",
+        "vid_1_badge": "NEW • COACH HANNAH LIN",
+        "vid_1_title": "10-Min High-Density Core Abs + Box Breathing Recovery",
+        "vid_1_desc": "45s Work / 15s Rest • Upper Abs, Lower Abs, Obliques & 4-4-4-4 Parasympathetic Cooldown.",
+        "vid_2_badge": "NEW • DR. ELENA LINDQVIST, DPT",
+        "vid_2_title": "12-Min Clinical Core & Ab Sculpting (No Neck Pain)",
+        "vid_2_desc": "Spine-Safe Biomechanics • Deep Transverse Abdominis, Obliques & Zero Cervical Strain.",
+        "vid_3_badge": "FULL ECOSYSTEM WALKTHROUGH",
+        "vid_3_title": "50:50 Cinema Mode, Apple TV 4K & Live Heart Rate Sync",
+        "vid_3_desc": "See Dynamic Island, UP NEXT rest previews, and Apple Watch & AirPods Pro live BPM in action.",
+        "watch_coach_preview": "▶ Watch Coach Promo",
 
         # Features Section
         "sec_features_title": "Engineered for Athletic Excellence",
@@ -251,9 +261,19 @@ translations = {
         ],
 
         # Video Demo Section
-        "sec_video_badge": "實機功能展示",
-        "sec_video_title": "親身體驗 Workout Timer 的流暢實機操作",
-        "sec_video_sub": "觀看 Hannah 教練 10 分鐘腹肌示範、50:50 橫向劇院巨幕模式，以及 Apple Watch 與 AirPods 即時心率串流。",
+        "sec_video_badge": "教練課表與實機展示",
+        "sec_video_title": "親身體驗真人教練課表與流暢實機操作",
+        "sec_video_sub": "觀看 Hannah Lin 教練 10 分鐘高密度核心腹肌＋方盒呼吸恢復、Dr. Elena Lindqvist 物理治療博士 12 分鐘零頸壓臨床核心雕塑，以及 50:50 劇院模式與 Apple Watch 即時心率串流。",
+        "vid_1_badge": "全新發表 • HANNAH LIN 教練",
+        "vid_1_title": "10 分鐘高密度核心腹肌 ＋ 方盒呼吸恢復",
+        "vid_1_desc": "45 秒訓練 / 15 秒休息 • 上腹、下腹、側腹全方位燃燒，搭配 4-4-4-4 方盒呼吸放鬆。",
+        "vid_2_badge": "全新發表 • DR. ELENA LINDQVIST 博士",
+        "vid_2_title": "12 分鐘臨床核心與腹肌雕塑（零頸部壓力）",
+        "vid_2_desc": "物理治療級生物力學 • 深度啟動腹橫肌與側腹穩定，徹底告別傳統仰臥起坐頸部痠痛。",
+        "vid_3_badge": "全生態系實機操作展示",
+        "vid_3_title": "50:50 橫向劇院模式、Apple TV 4K 與即時心率同步",
+        "vid_3_desc": "完整展示動態島進度環、UP NEXT 休息預習，以及 Apple Watch 與 AirPods Pro 即時心率。",
+        "watch_coach_preview": "▶ 觀看教練宣傳片",
 
         # Features Section
         "sec_features_title": "專為極致運動表現打造",
@@ -391,9 +411,19 @@ translations = {
         ],
 
         # Video Demo Section
-        "sec_video_badge": "实机功能展示",
-        "sec_video_title": "亲身体验 Workout Timer 的流畅实机操作",
-        "sec_video_sub": "观看 Hannah 教练 10 分钟腹肌示范、50:50 横向影院巨幕模式，以及 Apple Watch 与 AirPods 实时心率同步。",
+        "sec_video_badge": "教练课表与实机展示",
+        "sec_video_title": "亲身体验真人教练课表与流畅实机操作",
+        "sec_video_sub": "观看 Hannah Lin 教练 10 分钟高密度核心腹肌＋方盒呼吸恢复、Dr. Elena Lindqvist 物理治疗博士 12 分钟零颈压临床核心雕塑，以及 50:50 影院模式与 Apple Watch 实时心率同步。",
+        "vid_1_badge": "全新发布 • HANNAH LIN 教练",
+        "vid_1_title": "10 分钟高密度核心腹肌 ＋ 方盒呼吸恢复",
+        "vid_1_desc": "45 秒训练 / 15 秒休息 • 上腹、下腹、侧腹全方位轰炸，搭配 4-4-4-4 方盒呼吸放松。",
+        "vid_2_badge": "全新发布 • DR. ELENA LINDQVIST 博士",
+        "vid_2_title": "12 分钟临床核心与腹肌雕塑（零颈部压力）",
+        "vid_2_desc": "物理治疗级生物力学 • 深度激活腹横肌与侧腹稳定，彻底告别传统卷腹颈部酸痛。",
+        "vid_3_badge": "全生态系实机操作演示",
+        "vid_3_title": "50:50 横向影院模式、Apple TV 4K 与实时心率同步",
+        "vid_3_desc": "完整展示灵动岛进度环、UP NEXT 休息预习，以及 Apple Watch 与 AirPods Pro 实时心率。",
+        "watch_coach_preview": "▶ 观看教练宣传片",
 
         # Features Section
         "sec_features_title": "专为巅峰运动表现而生",
@@ -531,9 +561,19 @@ translations = {
         ],
 
         # Video Demo Section
-        "sec_video_badge": "DEMO EN ACCIÓN",
-        "sec_video_title": "Descubre Workout Timer en Acción",
-        "sec_video_sub": "Mira la rutina de abdomen con la entrenadora Hannah, el Modo Cine 50:50 y la sincronización con Apple Watch y AirPods.",
+        "sec_video_badge": "ENTRENADORES Y DEMO EN ACCIÓN",
+        "sec_video_title": "Descubre a tus Entrenadores y Workout Timer en Acción",
+        "sec_video_sub": "Mira la rutina de Abdomen de 10 Min + Respiración en Caja con Coach Hannah Lin, Core Clínico de 12 Min (Sin Dolor de Cuello) con la Dra. Elena Lindqvist, DPT, y el Modo Cine 50:50.",
+        "vid_1_badge": "NUEVO • COACH HANNAH LIN",
+        "vid_1_title": "Abdomen de Alta Densidad en 10 Min + Respiración en Caja",
+        "vid_1_desc": "45s Serie / 15s Descanso • Abdomen superior, inferior, oblicuos y recuperación 4-4-4-4.",
+        "vid_2_badge": "NUEVO • DRA. ELENA LINDQVIST, DPT",
+        "vid_2_title": "Core Clínico y Esculpido Abdominal en 12 Min (Sin Dolor Cervical)",
+        "vid_2_desc": "Biomecánica Segura • Activación profunda del transverso abdominal y oblicuos con cero tensión en el cuello.",
+        "vid_3_badge": "RECORRIDO COMPLETO DE LA APP",
+        "vid_3_title": "Modo Cine 50:50, Apple TV 4K y Pulso en Vivo",
+        "vid_3_desc": "Descubre Dynamic Island, vistas previas UP NEXT y sincronización con Apple Watch y AirPods Pro.",
+        "watch_coach_preview": "▶ Ver Promo del Entrenador",
 
         # Features Section
         "sec_features_title": "Diseñado para el Máximo Rendimiento",
@@ -682,6 +722,14 @@ def generate_page(lang_code):
     programs_html = ""
     for idx, p in enumerate(t["programs"]):
         badge_num = f"#{idx+1:02d}"
+        promo_vid_id = ""
+        if "Hannah" in p["coach"]:
+            promo_vid_id = "Lr17qfFtyIk"
+        elif "Elena" in p["coach"]:
+            promo_vid_id = "l3AbmjBSlKc"
+        promo_btn_html = ""
+        if promo_vid_id:
+            promo_btn_html = f'<a href="https://youtu.be/{promo_vid_id}" class="program-promo-btn" data-video-id="{promo_vid_id}" target="_blank" rel="noopener noreferrer">{t["watch_coach_preview"]}</a>'
         programs_html += f"""
         <div class="program-card">
           <div class="program-header">
@@ -694,6 +742,7 @@ def generate_page(lang_code):
             <span class="program-type">⚡️ {p['type']}</span>
           </div>
           <p class="program-desc">{p['desc']}</p>
+          {promo_btn_html}
         </div>"""
 
     # 3. Multi-Device Ecosystem HTML
@@ -1320,29 +1369,92 @@ def generate_page(lang_code):
     }}
 
     /* Video Showcase Section & Cinema Modal */
+    .program-promo-btn {{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 8px 16px;
+      border-radius: 99px;
+      background: rgba(48, 209, 88, 0.14);
+      border: 1px solid rgba(48, 209, 88, 0.4);
+      color: var(--primary-green);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }}
+    .program-promo-btn:hover {{
+      background: rgba(48, 209, 88, 0.26);
+      transform: translateY(-2px);
+    }}
     .video-showcase-section {{
-      max-width: 960px;
-      margin: 30px auto 70px;
+      max-width: 1140px;
+      margin: 30px auto 80px;
       padding: 0 20px;
       box-sizing: border-box;
       text-align: center;
     }}
-    .video-wrapper {{
+    .video-featured-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
       margin-top: 28px;
+    }}
+    .video-feature-box {{
+      background: var(--card-bg);
+      border: 1px solid rgba(48, 209, 88, 0.28);
+      border-radius: 24px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
+      transition: transform 0.25s, border-color 0.25s;
+    }}
+    .video-feature-box:hover {{
+      transform: translateY(-4px);
+      border-color: rgba(48, 209, 88, 0.6);
+    }}
+    .video-feature-meta {{
+      margin-bottom: 14px;
+    }}
+    .video-feature-tag {{
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      color: var(--primary-green);
+      background: rgba(48, 209, 88, 0.14);
+      border: 1px solid rgba(48, 209, 88, 0.35);
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 8px;
+    }}
+    .video-feature-meta h3 {{
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      color: #fff;
+    }}
+    .video-feature-meta p {{
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }}
+    .video-wrapper {{
+      margin-top: 24px;
       width: 100%;
-      display: flex;
-      justify-content: center;
     }}
     .video-card {{
       position: relative;
       width: 100%;
       padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
       height: 0;
-      border-radius: 22px;
+      border-radius: 18px;
       overflow: hidden;
       background: #000;
       border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.75);
     }}
     .video-card iframe {{
       position: absolute;
@@ -1351,6 +1463,29 @@ def generate_page(lang_code):
       width: 100%;
       height: 100%;
       border: 0;
+    }}
+    .modal-switcher {{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }}
+    .modal-switch-btn {{
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }}
+    .modal-switch-btn.active {{
+      background: var(--primary-green);
+      border-color: var(--primary-green);
+      color: #000;
     }}
 
     /* Cinema Video Lightbox Modal */
@@ -1784,9 +1919,13 @@ def generate_page(lang_code):
           <span class="cta-apple-icon"></span>
           <span>{t['cta_app_store']}</span>
         </a>
-        <a href="https://www.youtube.com/watch?v=w05YC97VSYc" class="cta-video-btn" data-video-open="true" target="_blank" rel="noopener noreferrer">
+        <a href="https://youtu.be/Lr17qfFtyIk" class="cta-video-btn" data-video-id="Lr17qfFtyIk" target="_blank" rel="noopener noreferrer">
           <span class="cta-video-icon">▶</span>
-          <span>{t['cta_watch_video']}</span>
+          <span>{t['cta_watch_video']} (Hannah)</span>
+        </a>
+        <a href="https://youtu.be/l3AbmjBSlKc" class="cta-video-btn" data-video-id="l3AbmjBSlKc" target="_blank" rel="noopener noreferrer">
+          <span class="cta-video-icon">▶</span>
+          <span>Dr. Elena Promo</span>
         </a>
       </div>
       <div class="cta-note">{t['cta_note']}</div>
@@ -1890,13 +2029,53 @@ def generate_page(lang_code):
       <h2>{t['sec_video_title']}</h2>
       <p>{t['sec_video_sub']}</p>
     </div>
+
+    <div class="video-featured-grid">
+      <div class="video-feature-box">
+        <div class="video-feature-meta">
+          <span class="video-feature-tag">{t['vid_1_badge']}</span>
+          <h3>{t['vid_1_title']}</h3>
+          <p>{t['vid_1_desc']}</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/Lr17qfFtyIk?rel=0" 
+                  title="{t['vid_1_title']}" 
+                  loading="lazy" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-feature-box">
+        <div class="video-feature-meta">
+          <span class="video-feature-tag">{t['vid_2_badge']}</span>
+          <h3>{t['vid_2_title']}</h3>
+          <p>{t['vid_2_desc']}</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/l3AbmjBSlKc?rel=0" 
+                  title="{t['vid_2_title']}" 
+                  loading="lazy" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
     <div class="video-wrapper">
-      <div class="video-card">
-        <iframe src="https://www.youtube-nocookie.com/embed/w05YC97VSYc?rel=0" 
-                title="Workout Timer Showcase Video" 
-                loading="lazy" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen></iframe>
+      <div class="video-feature-box" style="max-width: 820px; margin: 0 auto;">
+        <div class="video-feature-meta">
+          <span class="video-feature-tag" style="color: var(--primary-cyan); background: rgba(100,210,255,0.12); border-color: rgba(100,210,255,0.35);">{t['vid_3_badge']}</span>
+          <h3>{t['vid_3_title']}</h3>
+          <p>{t['vid_3_desc']}</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/w05YC97VSYc?rel=0" 
+                  title="Workout Timer Showcase Video" 
+                  loading="lazy" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -2033,10 +2212,15 @@ def generate_page(lang_code):
   </footer>
 
   <!-- Lightbox Video Modal -->
-  <div id="videoModal" class="video-modal">
+  <div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-label="Workout Timer Video Showcase">
     <div class="video-modal-backdrop" id="modalBackdrop"></div>
     <div class="video-modal-dialog">
       <button class="video-modal-close" id="modalCloseBtn" aria-label="Close Video">✕</button>
+      <div class="modal-switcher">
+        <button class="modal-switch-btn active" data-switch-vid="Lr17qfFtyIk">🔥 Coach Hannah Lin</button>
+        <button class="modal-switch-btn" data-switch-vid="l3AbmjBSlKc">🩺 Dr. Elena Lindqvist</button>
+        <button class="modal-switch-btn" data-switch-vid="w05YC97VSYc">📱 Full App Demo</button>
+      </div>
       <div class="video-modal-player-wrap">
         <iframe id="modalIframe" src="" title="Workout Timer App Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
@@ -2145,11 +2329,17 @@ def generate_page(lang_code):
       const modalIframe = document.getElementById('modalIframe');
       const backdrop = document.getElementById('modalBackdrop');
       const closeBtn = document.getElementById('modalCloseBtn');
-      const videoTrigger = document.querySelector('[data-video-open="true"]');
+      const switchBtns = document.querySelectorAll('.modal-switch-btn');
       
-      function openModal(e) {{
-        if (e) e.preventDefault();
-        modalIframe.src = "https://www.youtube-nocookie.com/embed/w05YC97VSYc?autoplay=1&rel=0";
+      function setModalVideo(vidId) {{
+        modalIframe.src = "https://www.youtube-nocookie.com/embed/" + vidId + "?autoplay=1&rel=0";
+        switchBtns.forEach(btn => {{
+          btn.classList.toggle('active', btn.getAttribute('data-switch-vid') === vidId);
+        }});
+      }}
+
+      function openModal(vidId) {{
+        setModalVideo(vidId || "Lr17qfFtyIk");
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }}
@@ -2160,7 +2350,19 @@ def generate_page(lang_code):
         document.body.style.overflow = '';
       }}
       
-      if (videoTrigger) videoTrigger.addEventListener('click', openModal);
+      document.querySelectorAll('[data-video-id]').forEach(trigger => {{
+        trigger.addEventListener('click', function(e) {{
+          e.preventDefault();
+          openModal(this.getAttribute('data-video-id'));
+        }});
+      }});
+
+      switchBtns.forEach(btn => {{
+        btn.addEventListener('click', function() {{
+          setModalVideo(this.getAttribute('data-switch-vid'));
+        }});
+      }});
+
       if (backdrop) backdrop.addEventListener('click', closeModal);
       if (closeBtn) closeBtn.addEventListener('click', closeModal);
       window.addEventListener('keydown', (e) => {{
