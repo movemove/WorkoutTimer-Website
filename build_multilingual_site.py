@@ -124,6 +124,9 @@ translations = {
         "vid_3_title": "50:50 Cinema Mode, Apple TV 4K & Live Heart Rate Sync",
         "vid_3_desc": "See Dynamic Island, UP NEXT rest previews, and Apple Watch & AirPods Pro live BPM in action.",
         "watch_coach_preview": "▶ Watch Coach Promo",
+        "promo_badge": "🎁 VIP LAUNCH OFFER",
+        "promo_text": "Unlock Dr. Elena's Special Offer on the App Store with code",
+        "promo_cta": "Redeem Code DRELENA →",
 
         # Features Section
         "sec_features_title": "Engineered for Athletic Excellence",
@@ -274,6 +277,9 @@ translations = {
         "vid_3_title": "50:50 橫向劇院模式、Apple TV 4K 與即時心率同步",
         "vid_3_desc": "完整展示動態島進度環、UP NEXT 休息預習，以及 Apple Watch 與 AirPods Pro 即時心率。",
         "watch_coach_preview": "▶ 觀看教練宣傳片",
+        "promo_badge": "🎁 限時 VIP 專屬優惠",
+        "promo_text": "於 App Store 使用專屬優惠碼解鎖 Dr. Elena 特別優惠：",
+        "promo_cta": "立即兌換 DRELENA →",
 
         # Features Section
         "sec_features_title": "專為極致運動表現打造",
@@ -424,6 +430,9 @@ translations = {
         "vid_3_title": "50:50 横向影院模式、Apple TV 4K 与实时心率同步",
         "vid_3_desc": "完整展示灵动岛进度环、UP NEXT 休息预习，以及 Apple Watch 与 AirPods Pro 实时心率。",
         "watch_coach_preview": "▶ 观看教练宣传片",
+        "promo_badge": "🎁 限时 VIP 专属优惠",
+        "promo_text": "在 App Store 使用专属优惠码解锁 Dr. Elena 特别优惠：",
+        "promo_cta": "立即兑换 DRELENA →",
 
         # Features Section
         "sec_features_title": "专为巅峰运动表现而生",
@@ -574,6 +583,9 @@ translations = {
         "vid_3_title": "Modo Cine 50:50, Apple TV 4K y Pulso en Vivo",
         "vid_3_desc": "Descubre Dynamic Island, vistas previas UP NEXT y sincronización con Apple Watch y AirPods Pro.",
         "watch_coach_preview": "▶ Ver Promo del Entrenador",
+        "promo_badge": "🎁 OFERTA VIP DE LANZAMIENTO",
+        "promo_text": "Desbloquea la oferta especial de la Dra. Elena en el App Store con el código",
+        "promo_cta": "Canjear Código DRELENA →",
 
         # Features Section
         "sec_features_title": "Diseñado para el Máximo Rendimiento",
@@ -1083,6 +1095,52 @@ def generate_page(lang_code):
       font-size: 13px;
       color: var(--text-muted);
       margin-top: 14px;
+    }}
+    .promo-banner {{
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 22px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 159, 10, 0.16) 0%, rgba(48, 209, 88, 0.14) 100%);
+      border: 1px solid rgba(255, 159, 10, 0.45);
+      box-shadow: 0 10px 32px rgba(255, 159, 10, 0.18);
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }}
+    .promo-banner:hover {{
+      transform: translateY(-2px);
+      border-color: rgba(255, 159, 10, 0.85);
+      box-shadow: 0 14px 40px rgba(255, 159, 10, 0.32);
+    }}
+    .promo-tag {{
+      background: var(--primary-orange);
+      color: #000;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.7px;
+      padding: 4px 10px;
+      border-radius: 99px;
+    }}
+    .promo-code-box {{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 900;
+      font-size: 14px;
+      color: var(--primary-orange);
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px dashed rgba(255, 159, 10, 0.65);
+      padding: 3px 10px;
+      border-radius: 8px;
+      letter-spacing: 1px;
+    }}
+    .promo-redeem-link {{
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--primary-green);
     }}
 
     /* Section Headers */
@@ -1974,6 +2032,14 @@ def generate_page(lang_code):
         <a href="https://youtu.be/l3AbmjBSlKc" class="cta-video-btn" data-video-id="l3AbmjBSlKc" target="_blank" rel="noopener noreferrer">
           <span class="cta-video-icon">▶</span>
           <span>Dr. Elena Promo</span>
+        </a>
+      </div>
+      <div>
+        <a href="https://apps.apple.com/redeem?ctx=offercodes&id=6811742209&code=DRELENA" class="promo-banner" target="_blank" rel="noopener noreferrer">
+          <span class="promo-tag">{t['promo_badge']}</span>
+          <span style="font-size: 13.5px; font-weight: 600;">{t['promo_text']}</span>
+          <span class="promo-code-box">DRELENA</span>
+          <span class="promo-redeem-link">{t['promo_cta']}</span>
         </a>
       </div>
       <div class="cta-note">{t['cta_note']}</div>
