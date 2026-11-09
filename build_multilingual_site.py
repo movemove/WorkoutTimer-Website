@@ -840,11 +840,11 @@ def generate_page(lang_code):
       --primary-blue: #0A84FF;
       --primary-red: #FF453A;
       --primary-cyan: #64D2FF;
-      --bg-dark: #000000;
-      --card-bg: rgba(22, 22, 28, 0.75);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --text-main: #FFFFFF;
-      --text-muted: #98989D;
+      --bg-dark: #030407;
+      --card-bg: linear-gradient(165deg, rgba(24, 26, 34, 0.85) 0%, rgba(12, 13, 18, 0.92) 100%);
+      --card-border: rgba(255, 255, 255, 0.09);
+      --text-main: #F5F7FA;
+      --text-muted: #9498A6;
     }}
     * {{
       margin: 0;
@@ -859,28 +859,36 @@ def generate_page(lang_code):
       line-height: 1.6;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(48, 209, 88, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(10, 132, 255, 0.08) 0%, transparent 40%);
-      background-repeat: no-repeat;
+        radial-gradient(ellipse 80% 45% at 50% -5%, rgba(48, 209, 88, 0.18) 0%, transparent 65%),
+        radial-gradient(circle at 85% 18%, rgba(100, 210, 255, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 15% 32%, rgba(255, 159, 10, 0.08) 0%, transparent 45%),
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+      background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
     }}
 
-    /* Header / Nav */
+    /* Floating Glass Pill Header */
     header {{
       position: sticky;
-      top: 0;
+      top: 14px;
       z-index: 100;
-      background: rgba(0, 0, 0, 0.82);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0 16px;
+      margin-bottom: 10px;
     }}
     nav {{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 20px;
-      max-width: 1200px;
+      padding: 12px 22px;
+      max-width: 1180px;
       margin: 0 auto;
+      background: rgba(10, 12, 18, 0.78);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }}
     .brand {{
       display: flex;
@@ -890,15 +898,19 @@ def generate_page(lang_code):
       color: #fff;
     }}
     .brand img {{
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(48, 209, 88, 0.35);
+      box-shadow: 0 0 18px rgba(48, 209, 88, 0.45);
+      border: 1px solid rgba(48, 209, 88, 0.35);
     }}
     .brand-title {{
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #fff 0%, #d0ffd8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }}
     .nav-right {{
       display: flex;
@@ -907,26 +919,26 @@ def generate_page(lang_code):
     }}
     .nav-links {{
       display: flex;
-      gap: 20px;
+      gap: 22px;
     }}
     .nav-links a {{
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
       transition: color 0.2s;
     }}
     .nav-links a:hover {{
-      color: #fff;
+      color: var(--primary-green);
     }}
     .lang-picker {{
       display: flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 99px;
-      padding: 4px 12px;
-      font-size: 13px;
+      padding: 5px 14px;
+      font-size: 12.5px;
       font-weight: 700;
       gap: 8px;
     }}
@@ -937,6 +949,7 @@ def generate_page(lang_code):
     }}
     .lang-picker a.active {{
       color: var(--primary-green);
+      text-shadow: 0 0 10px rgba(48, 209, 88, 0.4);
     }}
     @media (max-width: 860px) {{
       .nav-links {{
@@ -947,42 +960,42 @@ def generate_page(lang_code):
     /* Hero Section */
     .hero {{
       text-align: center;
-      padding: 60px 20px 40px;
-      max-width: 960px;
+      padding: 64px 20px 36px;
+      max-width: 1020px;
       margin: 0 auto;
     }}
     .badge {{
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(48, 209, 88, 0.12);
+      background: linear-gradient(90deg, rgba(48, 209, 88, 0.16) 0%, rgba(100, 210, 255, 0.12) 100%);
       color: var(--primary-green);
-      padding: 7px 18px;
+      padding: 8px 20px;
       border-radius: 99px;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 24px;
-      border: 1px solid rgba(48, 209, 88, 0.35);
-      box-shadow: 0 0 20px rgba(48, 209, 88, 0.15);
+      border: 1px solid rgba(48, 209, 88, 0.4);
+      box-shadow: 0 0 28px rgba(48, 209, 88, 0.2);
     }}
     h1 {{
-      font-size: clamp(34px, 5.8vw, 64px);
+      font-size: clamp(36px, 6vw, 68px);
       font-weight: 900;
-      letter-spacing: -1.8px;
-      line-height: 1.1;
+      letter-spacing: -2px;
+      line-height: 1.08;
       margin-bottom: 22px;
     }}
     h1 span {{
-      background: linear-gradient(135deg, #30D158 0%, #64D2FF 50%, #FF9F0A 100%);
+      background: linear-gradient(135deg, #30D158 0%, #64D2FF 55%, #FF9F0A 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }}
     .hero p {{
-      font-size: clamp(16px, 2.2vw, 20px);
+      font-size: clamp(16px, 2.1vw, 20px);
       color: var(--text-muted);
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 30px;
     }}
     .pills-container {{
@@ -993,47 +1006,48 @@ def generate_page(lang_code):
       margin-bottom: 36px;
     }}
     .pill {{
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 99px;
-      padding: 8px 18px;
+      padding: 9px 18px;
       font-size: 13px;
       font-weight: 700;
       color: #fff;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      transition: transform 0.2s, border-color 0.2s;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
     }}
     .pill:hover {{
       transform: translateY(-2px);
-      border-color: rgba(48, 209, 88, 0.5);
+      border-color: rgba(48, 209, 88, 0.55);
+      background: rgba(48, 209, 88, 0.08);
     }}
     .cta-group {{
       display: inline-flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 6px;
+      gap: 14px;
+      margin-bottom: 8px;
     }}
     .cta-btn {{
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: var(--primary-green);
+      background: linear-gradient(135deg, #30D158 0%, #24B247 100%);
       color: #000;
       padding: 16px 36px;
       border-radius: 99px;
       font-size: 17px;
       font-weight: 900;
       text-decoration: none;
-      box-shadow: 0 10px 32px rgba(48, 209, 88, 0.45);
+      box-shadow: 0 12px 36px rgba(48, 209, 88, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
       transition: transform 0.2s, box-shadow 0.2s;
     }}
     .cta-btn:hover, .cta-btn:active {{
-      transform: scale(0.98);
-      box-shadow: 0 14px 44px rgba(48, 209, 88, 0.65);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 48px rgba(48, 209, 88, 0.65);
     }}
     .cta-apple-icon {{
       font-size: 22px;
@@ -1043,27 +1057,27 @@ def generate_page(lang_code):
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.07);
       color: #fff;
-      padding: 16px 28px;
+      padding: 16px 26px;
       border-radius: 99px;
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 700;
       text-decoration: none;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       transition: background 0.2s, transform 0.2s, border-color 0.2s;
     }}
     .cta-video-btn:hover, .cta-video-btn:active {{
-      background: rgba(255, 255, 255, 0.16);
-      border-color: rgba(255, 255, 255, 0.4);
-      transform: scale(0.98);
+      background: rgba(48, 209, 88, 0.14);
+      border-color: rgba(48, 209, 88, 0.5);
+      transform: translateY(-2px);
       color: #fff;
     }}
     .cta-video-icon {{
-      color: #ff3b30;
-      font-size: 18px;
+      color: var(--primary-green);
+      font-size: 16px;
     }}
     .cta-note {{
       font-size: 13px;
@@ -1212,18 +1226,25 @@ def generate_page(lang_code):
     .programs-grid {{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
+      gap: 22px;
+      align-items: stretch;
     }}
     .program-card {{
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 24px;
-      transition: transform 0.25s, border-color 0.25s;
+      border-radius: 24px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
     }}
     .program-card:hover {{
-      transform: translateY(-4px);
-      border-color: rgba(48, 209, 88, 0.4);
+      transform: translateY(-5px);
+      border-color: rgba(48, 209, 88, 0.5);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(48, 209, 88, 0.12);
     }}
     .program-header {{
       display: flex;
@@ -1372,9 +1393,11 @@ def generate_page(lang_code):
     .program-promo-btn {{
       display: inline-flex;
       align-items: center;
+      align-self: flex-start;
       gap: 6px;
-      margin-top: 14px;
-      padding: 8px 16px;
+      margin-top: auto;
+      padding-top: 16px;
+      padding: 9px 18px;
       border-radius: 99px;
       background: rgba(48, 209, 88, 0.14);
       border: 1px solid rgba(48, 209, 88, 0.4);
@@ -1384,65 +1407,88 @@ def generate_page(lang_code):
       text-decoration: none;
       transition: background 0.2s, transform 0.2s;
     }}
+    .program-desc {{
+      margin-bottom: 16px;
+    }}
     .program-promo-btn:hover {{
       background: rgba(48, 209, 88, 0.26);
       transform: translateY(-2px);
     }}
     .video-showcase-section {{
-      max-width: 1140px;
-      margin: 30px auto 80px;
+      max-width: 1180px;
+      margin: 20px auto 80px;
       padding: 0 20px;
       box-sizing: border-box;
       text-align: center;
     }}
     .video-featured-grid {{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
       margin-top: 28px;
+      align-items: stretch;
+    }}
+    @media (max-width: 860px) {{
+      .video-featured-grid {{
+        grid-template-columns: 1fr;
+      }}
     }}
     .video-feature-box {{
-      background: var(--card-bg);
-      border: 1px solid rgba(48, 209, 88, 0.28);
-      border-radius: 24px;
-      padding: 20px;
+      background: linear-gradient(165deg, rgba(24, 28, 38, 0.9) 0%, rgba(10, 12, 18, 0.96) 100%);
+      border: 1px solid rgba(48, 209, 88, 0.32);
+      border-radius: 26px;
+      padding: 24px;
       text-align: left;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
-      transition: transform 0.25s, border-color 0.25s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
     }}
     .video-feature-box:hover {{
       transform: translateY(-4px);
-      border-color: rgba(48, 209, 88, 0.6);
+      border-color: rgba(48, 209, 88, 0.65);
+      box-shadow: 0 28px 72px rgba(0, 0, 0, 0.85), 0 0 32px rgba(48, 209, 88, 0.14);
     }}
     .video-feature-meta {{
-      margin-bottom: 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 18px;
     }}
     .video-feature-tag {{
       display: inline-block;
+      align-self: flex-start;
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.7px;
       color: var(--primary-green);
       background: rgba(48, 209, 88, 0.14);
-      border: 1px solid rgba(48, 209, 88, 0.35);
-      padding: 4px 12px;
+      border: 1px solid rgba(48, 209, 88, 0.38);
+      padding: 5px 13px;
       border-radius: 99px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }}
     .video-feature-meta h3 {{
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 800;
-      line-height: 1.3;
-      margin-bottom: 6px;
+      line-height: 1.32;
+      min-height: 2.64em;
+      margin-bottom: 8px;
       color: #fff;
+      display: flex;
+      align-items: flex-start;
     }}
     .video-feature-meta p {{
-      font-size: 13px;
+      font-size: 13.5px;
       color: var(--text-muted);
-      line-height: 1.45;
+      line-height: 1.5;
+      min-height: 3em;
+      margin-top: auto;
     }}
     .video-wrapper {{
-      margin-top: 24px;
+      margin-top: 26px;
       width: 100%;
     }}
     .video-card {{
@@ -1450,11 +1496,13 @@ def generate_page(lang_code):
       width: 100%;
       padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
       height: 0;
+      margin-top: auto;
+      flex-shrink: 0;
       border-radius: 18px;
       overflow: hidden;
       background: #000;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.8);
     }}
     .video-card iframe {{
       position: absolute;
@@ -1932,6 +1980,64 @@ def generate_page(lang_code):
     </div>
   </section>
 
+  <!-- Video Showcase Section (Promoted Above-the-Fold) -->
+  <section class="video-showcase-section" id="video-demo">
+    <div class="section-title">
+      <div class="badge">{t['sec_video_badge']}</div>
+      <h2>{t['sec_video_title']}</h2>
+      <p>{t['sec_video_sub']}</p>
+    </div>
+
+    <div class="video-featured-grid">
+      <div class="video-feature-box">
+        <div class="video-feature-meta">
+          <span class="video-feature-tag">{t['vid_1_badge']}</span>
+          <h3>{t['vid_1_title']}</h3>
+          <p>{t['vid_1_desc']}</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/Lr17qfFtyIk?rel=0" 
+                  title="{t['vid_1_title']}" 
+                  loading="lazy" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="video-feature-box">
+        <div class="video-feature-meta">
+          <span class="video-feature-tag">{t['vid_2_badge']}</span>
+          <h3>{t['vid_2_title']}</h3>
+          <p>{t['vid_2_desc']} </p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/l3AbmjBSlKc?rel=0" 
+                  title="{t['vid_2_title']}" 
+                  loading="lazy" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-wrapper">
+      <div class="video-feature-box" style="max-width: 860px; margin: 0 auto;">
+        <div class="video-feature-meta" style="margin-bottom: 14px;">
+          <span class="video-feature-tag" style="color: var(--primary-cyan); background: rgba(100,210,255,0.12); border-color: rgba(100,210,255,0.35);">{t['vid_3_badge']}</span>
+          <h3 style="min-height: auto;">{t['vid_3_title']}</h3>
+          <p style="min-height: auto;">{t['vid_3_desc']}</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/w05YC97VSYc?rel=0" 
+                  title="Workout Timer Showcase Video" 
+                  loading="lazy" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Apple TV Spotlight Section -->
   <section class="tv-spotlight-section" id="apple-tv">
     <div class="section-title">
@@ -2021,64 +2127,6 @@ def generate_page(lang_code):
     </div>
     <div class="gallery-hint">{t['gallery_hint']}</div>
   </div>
-
-  <!-- Video Showcase Section -->
-  <section class="video-showcase-section" id="video-demo">
-    <div class="section-title">
-      <div class="badge">{t['sec_video_badge']}</div>
-      <h2>{t['sec_video_title']}</h2>
-      <p>{t['sec_video_sub']}</p>
-    </div>
-
-    <div class="video-featured-grid">
-      <div class="video-feature-box">
-        <div class="video-feature-meta">
-          <span class="video-feature-tag">{t['vid_1_badge']}</span>
-          <h3>{t['vid_1_title']}</h3>
-          <p>{t['vid_1_desc']}</p>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube-nocookie.com/embed/Lr17qfFtyIk?rel=0" 
-                  title="{t['vid_1_title']}" 
-                  loading="lazy" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="video-feature-box">
-        <div class="video-feature-meta">
-          <span class="video-feature-tag">{t['vid_2_badge']}</span>
-          <h3>{t['vid_2_title']}</h3>
-          <p>{t['vid_2_desc']}</p>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube-nocookie.com/embed/l3AbmjBSlKc?rel=0" 
-                  title="{t['vid_2_title']}" 
-                  loading="lazy" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="video-wrapper">
-      <div class="video-feature-box" style="max-width: 820px; margin: 0 auto;">
-        <div class="video-feature-meta">
-          <span class="video-feature-tag" style="color: var(--primary-cyan); background: rgba(100,210,255,0.12); border-color: rgba(100,210,255,0.35);">{t['vid_3_badge']}</span>
-          <h3>{t['vid_3_title']}</h3>
-          <p>{t['vid_3_desc']}</p>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube-nocookie.com/embed/w05YC97VSYc?rel=0" 
-                  title="Workout Timer Showcase Video" 
-                  loading="lazy" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Features Bento Grid -->
   <section class="features" id="features">
@@ -2647,7 +2695,7 @@ export default {{
     return new Response(html, {{
       headers: {{
         "content-type": "text/html;charset=UTF-8",
-        "cache-control": "public, max-age=3600, stale-while-revalidate=86400"
+        "cache-control": "public, max-age=0, must-revalidate"
       }}
     }});
   }}
