@@ -502,17 +502,75 @@ def generate_page(lang_code):
       font-size: 14px;
       color: var(--muted);
     }}
+    .programs-carousel-wrap {{
+      position: relative;
+      display: flex;
+      align-items: center;
+    }}
     .programs-carousel {{
       display: flex;
       gap: 14px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      padding: 6px 4px 16px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(48, 209, 88, 0.4) rgba(255, 255, 255, 0.05);
+      padding: 6px 4px 18px;
+      cursor: grab;
+      user-select: none;
+      width: 100%;
+    }}
+    .programs-carousel.dragging {{
+      cursor: grabbing;
+      scroll-snap-type: none;
     }}
     .programs-carousel::-webkit-scrollbar {{
-      display: none;
+      height: 6px;
+    }}
+    .programs-carousel::-webkit-scrollbar-track {{
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 99px;
+    }}
+    .programs-carousel::-webkit-scrollbar-thumb {{
+      background: rgba(48, 209, 88, 0.4);
+      border-radius: 99px;
+    }}
+    .carousel-nav-btn {{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(12, 14, 20, 0.92);
+      border: 1px solid rgba(48, 209, 88, 0.55);
+      color: var(--green);
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75);
+      transition: background 0.2s, transform 0.2s;
+    }}
+    .carousel-nav-btn:hover {{
+      background: var(--green);
+      color: #000;
+      transform: translateY(-50%) scale(1.08);
+    }}
+    .carousel-nav-btn.prev {{
+      left: -10px;
+    }}
+    .carousel-nav-btn.next {{
+      right: -10px;
+    }}
+    @media (max-width: 679px) {{
+      .carousel-nav-btn {{
+        display: none;
+      }}
     }}
     .program-card {{
       flex: 0 0 84%;
@@ -582,10 +640,21 @@ def generate_page(lang_code):
       line-height: 1.45;
     }}
     .swipe-hint {{
-      text-align: center;
+      display: block;
+      margin: 8px auto 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 99px;
+      padding: 6px 16px;
       font-size: 12px;
+      font-weight: 700;
       color: var(--muted);
-      margin-top: 2px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }}
+    .swipe-hint:hover {{
+      color: var(--green);
+      border-color: rgba(48, 209, 88, 0.5);
     }}
 
     /* 4. Section 3: Minimal Footer & Sticky Bar */
@@ -704,10 +773,14 @@ def generate_page(lang_code):
         <h2>{t['sec_programs_title']}</h2>
         <p>{t['sec_programs_sub']}</p>
       </div>
-      <div class="programs-carousel">
-        {programs_html}
+      <div class="programs-carousel-wrap">
+        <button type="button" class="carousel-nav-btn prev" id="carouselPrev" aria-label="Previous Program">‹</button>
+        <div class="programs-carousel" id="programsCarousel">
+          {programs_html}
+        </div>
+        <button type="button" class="carousel-nav-btn next" id="carouselNext" aria-label="Next Program">›</button>
       </div>
-      <div class="swipe-hint">{t['swipe_hint']}</div>
+      <button type="button" class="swipe-hint" id="swipeHintBtn">{t['swipe_hint']}</button>
     </section>
   </main>
 
@@ -753,6 +826,49 @@ def generate_page(lang_code):
           stickyCta.classList.remove("visible");
         }}
       }}, {{ passive: true }});
+
+      // 3. Desktop Mouse Controls for Programs Carousel (Arrows, Click-to-Advance, & Click-and-Drag)
+      const carousel = document.getElementById("programsCarousel");
+      const prevBtn = document.getElementById("carouselPrev");
+      const nextBtn = document.getElementById("carouselNext");
+      const hintBtn = document.getElementById("swipeHintBtn");
+
+      function advanceCarousel(dir) {{
+        if (!carousel) return;
+        const step = 304;
+        if (dir > 0 && carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 20) {{
+          carousel.scrollTo({{ left: 0, behavior: "smooth" }});
+        }} else {{
+          carousel.scrollBy({{ left: dir * step, behavior: "smooth" }});
+        }}
+      }}
+
+      if (prevBtn) prevBtn.addEventListener("click", () => advanceCarousel(-1));
+      if (nextBtn) nextBtn.addEventListener("click", () => advanceCarousel(1));
+      if (hintBtn) hintBtn.addEventListener("click", () => advanceCarousel(1));
+
+      if (carousel) {{
+        let isDown = false;
+        let startX = 0;
+        let scrollLeft = 0;
+        carousel.addEventListener("mousedown", (e) => {{
+          isDown = true;
+          carousel.classList.add("dragging");
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        }});
+        window.addEventListener("mouseup", () => {{
+          if (!isDown) return;
+          isDown = false;
+          carousel.classList.remove("dragging");
+        }});
+        carousel.addEventListener("mousemove", (e) => {{
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - carousel.offsetLeft;
+          carousel.scrollLeft = scrollLeft - (x - startX) * 1.4;
+        }});
+      }}
     }});
   </script>
 </body>
